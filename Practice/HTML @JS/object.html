@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table cellpadding="0 cellpadding"0" border="0" width="100%" height="100%" align="center">
+        <tr valign="Middle">
+            <td align="Center"><img name="cup" src="./about.jpg" alt="Java" width="64" height="38"><p>
+                <a href="#" onclick="interval()">interval</a>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="#" onclick="timeout()">Timeout</a>
+            </p>
+
+            </td>
+
+        </tr>
+
+    </table>
+
+    <script>
+        let cupUp=new Image();
+        cupUp.src="about.jpg";
+        let cupDown=new Image();
+        cupDown.src="Java-logo.png";
+
+        let alpha;
+        function interval(){
+            alpha=window.setInterval("document.cup.src=cupDown.src",2000);
+        }
+        function timeout(){
+            window.setTimeout("document.cup.src=cupUp.src",3000);
+            // window.clearInetrval(alpha);
+        }
+    </script>
+</body>
+</html>
