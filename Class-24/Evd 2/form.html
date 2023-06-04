@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+   <pre>
+    <form action="form_result.html">
+        <label for="">Name</label>
+        <input type="text" id="name">
+
+        <label for="">Email</label>
+        <input type="email" id="email">
+
+        <label for="">Password</label>
+        <input type="password" id="password">
+
+        <label for="">Gender</label> <br>
+        <input type="radio" name="gender" id="male">Male 
+        <input type="radio" name="gender" id="female">Female 
+        <input type="radio" name="gender" id="other">Other
+
+        <label for="">Subject</label>
+        <select name="" id="subject">
+            <option >--select--</option>
+            <option >JEE</option>
+            <option >HTML</option>
+            <option >CSS</option>
+            <option >JS</option>
+        </select>
+
+        <label for="">Hobby</label>
+        <input type="checkbox" value="Playing"> Playing
+        <input type="checkbox" value="Riding"> Riding
+        <input type="checkbox" value="Reading"> Reading
+        <input type="checkbox" value="Swimming"> Swimming
+
+        <label>About</label>
+        <textarea id="about" cols="30" rows="10"></textarea>
+        
+      
+        <button type="submit" value="submit" onclick="dataTransfer()">Submit</button>
+    </form>
+   </pre>
+
+   <script>
+    function dataTransfer(){
+        const name=document.getElementById("name").value;
+        const email=document.getElementById("email").value;
+        const password=document.getElementById("password").value;
+        const about = document.getElementById("about").value;
+
+        let gender;
+        if(document.getElementById("male").checked==true){
+            gender="male";
+
+        }
+        else if(document.getElementById("Female").checked==true){
+            gender="female";
+        }
+
+        else{
+            gender="other"
+
+        }
+
+        let sub=document.getElementById("subject")
+        let subject=sub.options[sub.selectedIndex].text;
+
+        let hobby=[];
+        let ho=document.querySelectorAll('input[type=checkbox]:checked');
+
+        for( let i=0; i<ho.length;i++){
+            hobby.push(ho[i].value);
+
+        }
+
+        let s_hobby= hobby.toString();
+
+        localStorage.setItem("name",name);
+        localStorage.setItem("email",email);
+        localStorage.setItem("password",password);
+        localStorage.setItem("gender",gender);
+        localStorage.setItem("subject",subject);
+        localStorage.setItem("s_hobby",s_hobby);
+        localStorage.setItem("s_about",about);
+        
+    }
+   </script>
+</body>
+</html>
