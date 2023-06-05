@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let Number1=parseInt(prompt("Enter Your First Number"))
+        let Number2=parseInt(prompt("Enter Your Second Number"))
+        let Number3=parseInt(prompt("Enter Your Third Number"))
+        let max=0;
+        let min=0;
+
+        if(Number1>Number2 && Number1>Number3  ){
+            max=Number1;
+
+        }
+        else if(Number2>Number1 && Number2>Number3  ){
+            max=Number2;
+
+        }
+        else{
+            max=Number3;
+
+        }
+
+        if(Number1<Number2 && Number1<Number3  ){
+            min=Number1;
+
+        }
+        else if(Number2<Number1 && Number2<Number3  ){
+            min=Number2;
+
+        }
+        else{
+            min=Number3;
+
+        }
+        alert("Max number is "+ max +"Min number is"+min)
+
+
+    </script>
+</body>
+</html>

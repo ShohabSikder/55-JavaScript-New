@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fibonacci Series</title>
+    <script>
+        function generateFibonacci() {
+            var fibonacci = [0, 1]; // Initialize the Fibonacci series with the first two numbers
+            var count = 8; // Number of Fibonacci numbers to generate
+
+            // Generate the Fibonacci series
+            for (var i = 2; i < count; i++) {
+                fibonacci[i] = fibonacci[i - 1] + fibonacci[i - 2];
+            }
+
+            // Display the Fibonacci series in HTML
+            var output = document.getElementById("output");
+            output.innerHTML = fibonacci.join(", ");
+        }
+    </script>
+</head>
+<body>
+    <h1>Fibonacci Series</h1>
+    <button onclick="generateFibonacci()">Generate</button>
+    <p id="output"></p>
+</body>
+</html>
