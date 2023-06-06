@@ -95,6 +95,9 @@
 //     console.log('Not prime number');
 // }
 
+
+
+
 // Swap
 // let x=10;
 // let y=20;
@@ -104,6 +107,10 @@
 // y=temp;
 
 // console.log('x= '+x+' y= '+y);
+
+
+
+
 
 let n1=0;
 let n2=1;
