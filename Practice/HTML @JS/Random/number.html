@@ -7,52 +7,10 @@
     <title>Document</title>
 </head>
 <body>
-    <!-- <label>Number1</label> <br>
-    <input type="text" id="number1"> <br>
-    <label>Number2</label> <br>
-    <input type="text" id="number2"> <br>
-    <label>Number3</label> <br>
-    <input type="text" id="number3"> <br>
+ 
+<!-- Find Max and Min Number -->
 
-    <button onclick="findMaxNumber()">Max</button>
-    <button onclick="findMiNumber()">Min</button>
-    <p id="result">Result =</p>
-
-    <script>
-        function findMaxNumber(){
-            let n1=document.getElementById("number1").value;
-            let n2=document.getElementById("number2").value;
-            let n3=document.getElementById("number3").value;
-
-            if(n1<n2){
-                document.getElementById("result").innerHTML="Max no is"+ "=" +n2;
-
-            }
-            else if{
-                document.getElementById("result").innerHTML="Max no is"+ "=" +n1;
-            }
-            else{
-                document.getElementById("result").innerHTML="Max no is"+ "=" +n3;
-            }
-            
-        }
-        function findMiNumber(){
-            let n1=document.getElementById("number1").value;
-            let n2=document.getElementById("number2").value;
-
-            if(n1<n2){
-                document.getElementById("result").innerHTML="Min no is"+ "=" +n1;
-
-            }
-            else{
-                document.getElementById("result").innerHTML="Min no is"+ "=" +n2;
-            }
-            
-        }
-    </script> -->
-
-
-<!-- <label>Number1</label> <br>
+    <!-- <label>Number1</label>
     <input type="text" id="number1"> <br>
     <label>Number2</label> <br>
     <input type="text" id="number2"> <br>
@@ -96,56 +54,70 @@
             else{
                 document.getElementById("result").innerHTML="Min no is"+ "=" +n2;
             }
-            
-        } -->
+        }
+        
+    
+            </script> -->
 
-        <!-- Max and Min -->
-        <!-- <script>
-            let n=prompt("Please Enter Your Element")
-            let max=0;
-            let min=12;
-            let average=0;
-            let total=0;
 
-            for(let i=1; i<=5; i++){
-                let input=prompt("Please enter Number" + i);
-                total+=parseIntinput;
-                if(max<input){
-                    max=input;
+         <!-- Max and Min -->
+         <!-- <script>
+           let n=prompt("Please Enter Your Element")
+             let max=0;
+             let min=12;
+             let average=0;
+             let total=0;
 
-                }
-                if(min>input){
-                    min=input
+             for(let i=1; i<=5; i++){
+                 let input=prompt("Please enter Number" + i);
+                 total+=parseIntinput;
+                 if(max<input){
+                     max=input;
 
-                }
-                average=total/n
-                alert("Max is" + max+"Min is" +min+"Total is " +total+" Avrage is "+avarage);
+                 }
+                 if(min>input){
+                     min=input
+
+                 }
+                 average=total/n
+                 alert("Max is" + max+"Min is" +min+"Total is " +total+" Avrage is "+avarage);
+             }
+         </script> -->
+
+
+     <!-- integer Series Except  7,15,23 -->
+     <!-- <script>
+        for (let i = 1; i <= 50; i++) {
+            if (i == 7 || i == 15 || i == 23 || i % 2 !== 0) {
+                continue;
             }
-        </script> -->
-
-    <!-- </script> -->
-
-    <!-- integer Series Except  7,15,23 -->
-    <!-- <script>
-        for(let i=1; i<=50; i++){
-    if(i==7 || i==15 || i==23 || i%2!==0){
-        continue;
-
-    }
-    document.write("<span>" +i+"</span> <br>");
-}
+            document.write("<span>" + i + "</span> <br>");
+        }
     </script> -->
 
+<<<<<<< Updated upstream:Practice/HTML @JS/Random/number.html
     <script>
         let input=prompt("enter your number")
         let n=0;    
+=======
+        <!-- <h3>Show Number</h3>  -->
+    Show next 5 inetger
+     <script>
+        // let input=prompt("enter your number");
+        let n=1;
+        let r=0;
+>>>>>>> Stashed changes:Practice/HTML @JS/number.html
     
     
-        for(let i=input+1; i<=n; i++){ 
+        for(let i=5;  i++;){ 
+            r=n+i;
+        
 
-            document.write("<span>" + i +" </span>"); 
+            document.write("<span>" + r +" </span>"); 
 
         }
-    </script>
+
+     </script>
+    
 </body>
 </html>
