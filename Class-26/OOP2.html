@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <label for="">Name</label>
+        <input type="text"><br>
+        <label for="">Email</label>
+        <input type="email"><br>
+        <label for="">Cell no</label>
+        <input type="text"><br>
+        <input type="button" onclick="showText()" value="show">
+    </form>
+    <hr>
+    <form>
+        <label for="">S_Name</label>
+        <input type="text"><br>
+        <label for="">S_Email</label>
+        <input type="email"><br>
+        <label for="">S_Cell no</label>
+        <input type="text"><br>
+    </form>
+
+    <script>
+        function showText(){
+        document.forms[0].elements[0].value ="Hasan";
+        document.forms[1].elements[2].value ="01688132317";
+        }
+        
+    </script>
+</body>
+</html>
