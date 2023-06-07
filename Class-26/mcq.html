@@ -7,16 +7,45 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <!-- <p id="demo"></p> -->
 
     <script>
+        // x();
+
+        // A global search for non-digit characters:
+
         // function x(){
         // var s= "Good 100%";
         // var pattern = /\D/g;
         // var output= s.match(pattern);
         // document.write(output);
         //   }   
-        x();
+
+
+        // **A global search for digits:
+
+        // function x(){
+        // var s= "quality 100%";
+        // var pattern = /\d/g;
+        // var output= s.match(pattern);
+        // document.write(output);
+        // }
+
+        
+
+        // A global search for {(W)capital letter} it doesn't show non-word characters and digit:
+        // A global search for {(w) Small Letter} it doesn't show word characters and digit:
+
+        // function x(){
+        // var s = "Quality 100%!{[!!";
+        // var pattern = /\w/g;
+        // var output = s.match(pattern);
+        // document.write(output);
+        // }
+
+        
+        
+        
 //         function x(z,t,t,t,tw,){
 // alert(x.length);
 // }
@@ -27,20 +56,168 @@
         // qpt[3] = "QualityPointTechnologies";
         // document.write(qpt[0,1,2,3]);
 
+
+// qpt = (condition) ? "hello" : "bye";: This is the conditional (ternary) operator syntax. If the condition is true, the value before the : (colon) is assigned to "qpt". If the condition is false, the value after the : is assigned to "qpt".
+
 //         qpt=((44%2)==0)? "hello" : "bye";
 // document.write(qpt);
 
 
-        function x(){
-        var qpt = "First come, first served";
-        var pattern = /first/g;
-        document.write(qpt.match(pattern)[1]);
-        }
+
+// if only have (g) then i will assign value 0 and i will get (first) but if will give 1 it will show undefined..
+// if (gi) have, then i will asssign value 0, i will get  (First)
+        // function x(){
+        // var qpt = "First come, first served";
+        // var pattern = /first/gi;
+        // document.write(qpt.match(pattern)[0]);
+        // }
 
 
+//   last Index***
     // var qpt="QualityPointTechnologies";
     // var result =qpt.lastIndexOf("l");
     // document.write(result);
+
+
+
+    // var qpt = "Qualiyt Point Technologies";
+    // var result = qpt.split(" ");
+    // document.write(result);
+
+         
+    
+    // function x(){
+    //     var qpt = "QualityPointTechnologies";
+    //     var pattern = new RegExp("POIiNT","i");
+    //     document.write(qpt.match(pattern));
+    //     }
+
+
+    // let= ParseInt("15",10)
+    // document.write();
+
+    
+        // function x(){
+        // var qpt = "We are fast growing Software Company located in Chennai, India.";
+        // var pattern = new RegExp("in","gi");
+
+        // document.write(pattern.exec(qpt) + " ");
+        // document.write(pattern.exec(qpt) + " ");
+        // document.write(pattern.exec(qpt) + " ");
+        // }
+
+        //                                                  Problem
+        //    let sum=x;
+        //    let add=y;
+        //     function sum(x)
+        //     {
+        //     function add(y)
+        //     {
+        //     return x+y;
+        //     }
+        //     return add;
+        //     }
+        //     function callme() { result=sum(5)(5); alert(result); }
+
+
+            // You can write html tag in js
+        // document.write("<h1>This is a heading</h1>");
+        // document.write("<p>This is a paragraph.</p>");
+        // document.write("<p>This is another paragraph.</p>");
+
+
+        // color Mode                                        (problem)
+        //  document.linkColor="#00FF00";
+        //  document.LColor="#00FF00";
+        //  document.LinkC="#00FF00";
+        // document.hyperTextLink="#00FF00";
+
+        //    x();                                                 // (Problem-52)solved
+        // function x(){
+        // var qpt = "QualityPointTechnologies";
+        // var pattern = /Technologies/;
+        // var output= qpt.search(pattern);
+        // document.write("Position: " + output);
+        // }
+
+        // first number is ending point of string or you can say word and next one is starting point. when i will increase the number, it will show more letter
+        // var qpt = "QualityPointTechnologies";
+        // var result =qpt.substring(12,24);
+        // document.write(result);
+                                                // problem-66(solved)
+        // var s = "80000 or 9123456  ?";
+        // var pattern = /\d{4}/;
+        // var output = s.match(pattern);
+        // document.write(output);
+                                            // Problem-70(solved)
+        // var qpt = "QualityPointTechnologies";
+        // var result =qpt.indexOf("Technologies");
+        // document.write(result);
+
+                                            // Problem-71(solved)
+    //     x();
+    // function x(){
+    // var s = "Eat to live, but do not live to  eat eat eat and ";
+    // var pattern = new RegExp("and");
+    // document.write(pattern.exec(s));
+
+
+                                                // Problem-76
+            // function x(){
+            // var qpt = "QualityPointTechnologies";
+            // var pattern = new RegExp("POINT","i");
+            // document.write(qpt.match(pattern));
+            // }
+
+                    // Math Round
+        //    let x= Math.round(7.50);
+        //    document.write(x);
+
+        // let x=5;
+        // let y=4;
+        // let z=Math.max(x,y);
+        // document.write(z);
+
+//         let myArray = [1, 4, 3, 6, 10, 0, 22];
+// document.write(myArray.sort());
+
+                // Here variable names have to different and when variable name are same then it will give result the second one.
+            // var num=20;
+            // var nuM=30;
+            // document.write(num+nuM);
+
+
+            // var i=1, j=10;
+            // do{
+            // if(i++>--j)
+            // {
+            // continue;
+            // }}
+            // while(i<5);
+        
+        
+            // document.write("i="+i+"and j="+j);
+        
+
+            // var a=2;
+            // switch(a)
+            // {
+            // case 1:
+            // document.write("jan");
+            // break;
+            // case 2:
+            //  document.write("feb");
+            // defualt:
+            // document.write("out of range");}
+
+
+        //     var i=0;
+        // for(i;i<4;i+=2)
+        // {
+        // document.write(i+"");
+        // }
+        // document.write(i);
+
 
     </script>
 </body>
