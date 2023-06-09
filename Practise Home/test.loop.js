@@ -7,11 +7,7 @@
 // if(password=="asd124"){
 // console.log("Welcome" + userName)
 // }
-<<<<<<< Updated upstream
 // else { console.log("password is incorrect")
-=======
-// else{ console.log("password is incorrect")
->>>>>>> Stashed changes
 
 // }
 
@@ -23,7 +19,6 @@
 
 // Result Sheet
 
-<<<<<<< Updated upstream
 // let number=23;
 
 // if(number<=0){
@@ -47,31 +42,6 @@
 // else{
 // console.log("invalid number")
 // }
-=======
-let number=23;
-
-if(number<=0){
-console.log("invalid Number")
-}
-
-else if
-(number<=32){console.log("F")}
-else if
-(number<=39){console.log("D")}
-else if
-(number<=49){console.log("C")}
-else if
-(number<=59){console.log("B")}
-else if
-(number<=69){console.log("A-")}
-else if
-(number<=79){console.log("A")}
-else if
-(number<=100){console.log("A+")}
-else{
-console.log("invalid number")
-}
->>>>>>> Stashed changes
 
 // switch case
 
@@ -93,23 +63,22 @@ console.log("invalid number")
 
 // Prime Number
 
-<<<<<<< Updated upstream
-let counter=0;
-let number=2;
+// let counter=0;
+// let number=2;
 
-for(let i=1; i<=number; i++){
-  if( number%i==0){
-    counter=counter+1;
+// for(let i=1; i<=number; i++){
+//   if( number%i==0){
+//     counter=counter+1;
 
-  }
-}
-  if(counter==2)
-  {console.log("Prime Number");}
+//   }
+// }
+//   if(counter==2)
+//   {console.log("Prime Number");}
 
-else{
-  console.log("Not Prime Number");
-}
-=======
+// else{
+//   console.log("Not Prime Number");
+// }
+
 // let counter=0;
 // let number=9;
 
@@ -125,7 +94,7 @@ else{
 // else{
 //   console.log("Not Prime Number");
 // }
->>>>>>> Stashed changes
+
 
 // Swap
 
