@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <label for="">Unit Price</label><br>
+    <input type="text" id="unitprice" ><br>
+
+    <label for="">Quantity</label><br>
+    <input type="text" id="quantity" oninput="calculatePrice()"><br>
+    
+    <label for="">Price</label><br>
+    <input type="text" id="price" > <br>
+    
+    <label for="">Discount</label><br>
+    <input type="text" id="discount"><br>
+    
+    <label for="">Amount</label><br>
+    <input type="text" id="amount"><br>
+
+    <!-- <button onclick="calculatePrice()">submit</button> -->
+
+    <script>
+        function calculatePrice(){
+            // price=document.getElementById("price").value;
+            // discount=document.getElementById("discount").value;
+            // amount=document.getElementById("amount").value;
+            unitprice=document.getElementById("unitprice").value;
+            quantity=document.getElementById("quantity").value;
+            
+
+            totalAmount = price * quantity;
+            discountAmount=0;
+            payableAmount=0;
+            
+            if(price<=500){
+                discountAmount=price*(5/100);
+                payableAmount=price-discountAmount;
+            }
+            else if(price<=1000){
+                discountAmount=price*(7/100);
+                payableAmount=price-discountAmount;
+            }
+            else{
+                discountAmount=price*(7.5/100);
+                payableAmount=price-discountAmount;   
+            }
+
+            document.getElementById("discount").value=discountAmount;
+            document.getElementById("amount").value=payableAmount;
+            document.getElementById("totalAmount").value=totalAmount;
+        }
+
+    </script>
+</body>
+</html>
