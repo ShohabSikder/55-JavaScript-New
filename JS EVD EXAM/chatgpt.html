@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Trainee Data Collection Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    form {
+      width: 400px;
+      margin: 0 auto;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+
+    textarea {
+      width: 100%;
+      height: 100px;
+    }
+
+    input[type="submit"] {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Trainee Data Collection Form</h1>
+  <form id="traineeForm">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="contact">Contact:</label>
+    <input type="text" id="contact" name="contact" required>
+
+    <label for="remarks">Remarks:</label>
+    <textarea id="remarks" name="remarks"></textarea>
+
+    <label>Sex:</label>
+    <input type="radio" id="male" name="sex" value="male" required>
+    <label for="male">Male</label>
+    <input type="radio" id="female" name="sex" value="female" required>
+    <label for="female">Female</label>
+
+    <label for="courses">Courses:</label>
+    <input type="checkbox" id="nt" name="courses" value="NT">
+    <label for="nt">NT</label>
+    <input type="checkbox" id="iad" name="courses" value="IAD">
+    <label for="iad">IAD</label>
+    <input type="checkbox" id="ddd" name="courses" value="DDD">
+    <label for="ddd">DDD</label>
+    <input type="checkbox" id="esad" name="courses" value="ESAD">
+    <label for="esad">ESAD</label>
+
+    <label for="location">Location:</label>
+    <select id="location" name="location">
+      <option value="banani">Banani</option>
+      <option value="dhanmondi">Dhanmondi</option>
+      <option value="mirpur">Mirpur</option>
+    </select>
+
+    <input type="submit" value="Submit">
+  </form>
+
+  <script>
+    document.getElementById("traineeForm").addEventListener("submit", function(event) {
+      event.preventDefault(); // Prevent the form from submitting normally
+      
+      // Get form values
+      var name = document.getElementById("name").value;
+      var contact = document.getElementById("contact").value;
+      var remarks = document.getElementById("remarks").value;
+      var sex = document.querySelector('input[name="sex"]:checked').value;
+      
+      var courses = [];
+      var courseCheckboxes = document.querySelectorAll('input[name="courses"]:checked');
+      for (var i = 0; i < courseCheckboxes.length; i++) {
+        courses.push(courseCheckboxes[i].value);
+      }
+      
+      var location = document.getElementById("location").value;
+      
+      // Prepare data for display
+      var data = {
+        Name: name,
+        Contact: contact,
+        Remarks: remarks,
+        Sex: sex,
+        Courses: courses.join(", "),
+        Location:
