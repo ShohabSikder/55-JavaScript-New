@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h4>Find Prime number of in a range of number.</h4>
+
+
+  <script>
+    let n1=parseInt(prompt("enter your first number"));
+    let n2=parseInt(prompt("enter your second number"));
+
+    for(let i=n1; i<=n2; i++){
+      let counter=0;
+      for( let p=1; p<=i; p++){
+        if(i%p==0){
+          counter=counter+1;
+        }
+      }
+      if(counter==2){
+          document.write(i+"<br>");
+
+        }
+      
+
+    }
+  </script>
+</body>
+</html>

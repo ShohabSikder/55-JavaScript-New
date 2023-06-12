@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h4>Make a html file with input field as Price another input field as discount percentage and calculate the price after discount.</h4>
+  <pre>
+  <label>Price</label>
+  <input type="number" id="price">
+  <label>Discount</label>
+  <input type="number" id="discount" oninput="calculatedPrice()">
+  <label>Amount</label>
+  <input type="text" id="amount">
+  </pre>
+
+  <script>
+    function calculatedPrice(){
+      let price=parseInt(document.getElementById("price").value);
+      let discount=parseFloat(document.getElementById("discount").value);
+      let amount=price-(price*discount/100);
+      document.getElementById("amount").value=amount.toFixed(2);
+    }
+
+
+  </script>
+</body>
+</html>

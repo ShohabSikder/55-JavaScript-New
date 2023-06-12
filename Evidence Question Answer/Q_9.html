@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h4>Input 5 number in an array and make sum of these value.</h4>
+
+  <script>
+    let myArray=[];
+    let sum=0;
+    for(let i=1; i<=5;i++){
+      let input=parseInt(prompt("enter " +i+" number"));
+      myArray.push(input);
+      sum=sum+input;
+      
+      
+    }
+    document.write("My array is "+myArray+" My sum is "+sum);
+  </script>
+</body>
+</html>
