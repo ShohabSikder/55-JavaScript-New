@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form</title>
+</head>
+<body>
+  <form id="idb">
+    <pre>
+      <label for="">Name</label>
+      <input type="text" id="name">
+      <label for="">Email</label>
+      <input type="email" id="email">
+      <label for="">Remarks</label>
+      <textarea name="" id="remarks" cols="20" rows="5"></textarea>
+      <label for="">Gender</label>
+      <input type="radio" name="gender" value="male">Male
+      <input type="radio" name="gender" value="female">female
+      <label for="">Subject</label>
+      <input type="checkbox" value="NT">NT
+      <input type="checkbox" value="IAD">IAD
+      <input type="checkbox" value="DDD">DDD
+      <input type="checkbox" value="ESAD">ESAD
+      <label for="">Location</label>
+      <select name="location" id="location">
+        <option value="none">--Select One--</option>
+        <option value="Banani">Banani</option>
+        <option value="Dhanmondi">Dhanmondi</option>
+        <option value="Mirpur">Mirpur</option>
+      </select>
+      <input type="submit" value="Submit">
+    </pre>
+  </form>
+
+  <script>
+    function dataTransfer(event){
+      event.preventDefault();
+      const name=document.getElementById("name").value;
+      const email=document.getElementById("email").value;
+      const remarks=document.getElementById("remarks").value;
+      const gender=document.querySelector('input[type=radio].checked').value;
+      const subject=document.querySelectorAll('input[type=checkbox].checked').value;
+      const location=document.getElementById("location").value;
+      const sub=[];
+
+      sub.forEach(function(sub){subject.push(sub.value);});
+
+      var output= "Name : "+ name+ "<br>";
+       output += "Email : "+ email+ "<br>";
+       output += "Remarks : "+ remarks+ "<br>";
+       output += "location : "+ location+ "<br>";
+       output += "Subject : "+ subject.join(",")+ "<br>";
+       output += "Gender : "+ gender + "<br>";
+
+      var newWindow=window.open('','_blank');
+      newWindow.document.write("<pre> "+ output+ "</pre>");
+
+
+      
+    }
+    let form=document.getElementById("idb");
+      form.addEventListener('submit', dataTransfer);
+  </script>
+</body>
+</html>
