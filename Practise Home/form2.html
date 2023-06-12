@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="idb">
+        <pre>
+            <label>Name</label>
+            <input type="text" id="name">
+            <label>Contact</label>
+            <input type="text" id="contact">
+            <label>Remarks</label>
+            <textarea name="" id="remarks" cols="20" rows="5"></textarea>
+            <label>Gender</label>
+            <input type="radio" name="gender" value="male">Male
+            <input type="radio" name="gender" value="female">Female
+            <label>Hobby</label>
+            <input type="checkbox" value="Reading">Reading
+            <input type="checkbox" value="Travelling">Travelling
+            <input type="checkbox" value="Writing">Writing
+    
+            <label>Subject</label>
+            <select name="subject" id="subject">
+                <option value="None">--Select One--</option>
+                <option value="JEE">JEE</option>
+                <option value="HTML">HTML</option>
+                <option value="CSS">CSS</option>
+
+            </select>
+            <button type="submit" value="Submit">Submit</button>
+            <button type="reset" value="Reset">Reset</button>
+        </pre>
+    </form>
+
+    <script>
+        function dataMove(event){
+            event.preventDefault();
+            const name=document.getElementById("name").value;
+            const contact=document.getElementById("contact").value;
+            const remarks=document.getElementById("remarks").value;
+            const gender=document.querySelector('input[type=radio]:checked').value;
+            const hobby=document.querySelectorAll('input[type=checkbox]:checked');
+            const subject=document.getElementById("subject").value;
+            let ho=[];
+
+
+            hobby.forEach(function(hobby){
+        ho.push(hobby.value);});
+
+            var output = "Name : "+name +"<br>"
+             output += "Contact : "+ contact +"<br>"
+             output += "Remarks : "+ remarks +"<br>"
+             output += "Gender : "+ gender +"<br>"
+             output += "Hobby : "+ ho.join(" ,") +"<br>"
+             output += "Remarks : "+ remarks +"<br>"
+             output += "Subject : "+ subject +"<br>"
+
+            var newWindow=window.open(' ' , "_blank");
+            newWindow.document.write("<pre> "+ output +"</pre>")
+
+        }
+        let form=document.getElementById("idb");
+        form.addEventListener("submit",dataMove);
+        
+    </script>
+</body>
+</html>
